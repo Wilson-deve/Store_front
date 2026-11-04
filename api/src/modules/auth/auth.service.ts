@@ -4,13 +4,13 @@ import {
   InternalServerErrorException,
   UnauthorizedException,
 } from '@nestjs/common';
-import { PrismaService } from '../../prisma/prisma.service';
-import { AuthResponseDto } from './dto/auth-response.dto';
-import { RegisterDto } from './dto/register.dto';
+import { PrismaService } from '../../prisma/prisma.service.js';
+import { AuthResponseDto } from './dto/auth-response.dto.js';
+import { RegisterDto } from './dto/register.dto.js';
 import * as bcrypt from 'bcrypt';
 import { randomBytes } from 'crypto';
 import { JwtService } from '@nestjs/jwt';
-import { LoginDto } from './dto/login.dto';
+import { LoginDto } from './dto/login.dto.js';
 
 @Injectable()
 export class AuthService {
